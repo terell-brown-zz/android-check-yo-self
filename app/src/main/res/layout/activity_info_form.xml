@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etName"
-        android:text="Name" />
+        android:hint="Name" />
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -46,13 +46,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etEmail"
-        android:text="Email" />
+        android:hint="Email" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Do you have health insurance?"
         android:id="@+id/cbHasInsurace" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etPassword"
+        android:hint="Password" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etConfirmPassword"
+        android:hint="Confirm Password" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -62,12 +74,13 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Search"
-            android:id="@+id/bSearch"
+            android:text="Register"
+            android:id="@+id/bRegister"
             android:layout_gravity="center_horizontal|bottom"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="false"
             android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
 
 </LinearLayout>
