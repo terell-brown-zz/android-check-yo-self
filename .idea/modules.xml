@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CheckYoSelf.iml" filepath="$PROJECT_DIR$/CheckYoSelf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-check-yo-self.iml" filepath="$PROJECT_DIR$/android-check-yo-self.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
