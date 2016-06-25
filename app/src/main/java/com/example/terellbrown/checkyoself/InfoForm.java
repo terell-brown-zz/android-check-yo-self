@@ -34,7 +34,7 @@ public class InfoForm extends AppCompatActivity {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DoctorListActivity.class)
+                Intent intent = new Intent(DoctorListActivity.class, )
             }
         });
     }
