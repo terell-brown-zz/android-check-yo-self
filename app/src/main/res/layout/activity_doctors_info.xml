@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="100"
+    android:orientation="vertical"
+    tools:context="com.example.terellbrown.checkyoself.DoctorsInfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="40"></LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="60"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/DoctorName"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/image"
+            tools:text = "Doctor Name"
+/>
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Specialty"
+            android:id="@+id/tvSpecialty"
+            android:layout_below="@+id/name"
+            android:layout_toEndOf="@+id/image" />
+
+
+
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\n Address"
+            android:id="@+id/tvAddress"
+            android:layout_below="@+id/tvSpecialty"
+            android:layout_alignStart="@+id/tvDoctorType" />
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\n Phone Number"
+            android:id="@+id/tvPhoneNumber"
+            android:layout_below="@+id/tvSpecialty"
+            android:layout_alignStart="@+id/tvSpecialty"
+            android:layout_alignEnd="@+id/tvAddress" />
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="\n Description:"
+            android:id="@+id/tvDoctorBio"
+            android:layout_below="@+id/tvPhoneNumber"
+            android:layout_alignStart="@+id/tvSpecialty"
+            android:layout_alignEnd="@+id/tvAddress" />
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\n Dr. Jerome Aya-Ay was raised in the small rural town of Grantsville, West Virginia. He graduated from the University of Notre Dame with a bachelor's degree in Biology.  After studying for a Masters in Biomedical Sciences at Marshall University, he continued on to graduate from Marshall University School of Medicine in Huntington, WV with a medical degree.  "
+            android:id="@+id/tvDoctorBio"
+            android:layout_below="@+id/tvPhoneNumber"
+            android:layout_alignStart="@+id/tvSpecialty"
+            android:layout_alignEnd="@+id/tvAddress" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Appointment"
+        android:id="@+id/btBook"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="40" />
+
+
+</LinearLayout>
