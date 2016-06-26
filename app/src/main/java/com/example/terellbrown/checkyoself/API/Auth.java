@@ -4,32 +4,16 @@ package com.example.terellbrown.checkyoself.API;
  * Created by fnord on 6/25/16.
  */
 public class Auth {
-    private String accessToken;
-    private String tokenType;
-    private int expiresAt;
-    private int expiresIn;
+    public String access_token;
+    public String token_type;
+    public String expires;
+    public String expires_in;
 
-    public Auth(String accessToken, String tokenType, int expiresAt, int expiresIn){
-        this.accessToken = accessToken;
-        this.tokenType = tokenType;
-        this.expiresAt = expiresAt;
-        this.expiresIn = expiresIn;
-    }
-
-    public String getAccessToken() {
-        return accessToken;
-    }
-
-    public String getTokenType() {
-        return tokenType;
-    }
-
-    public int getExpiresAt() {
-        return expiresAt;
-    }
-
-    public int getExpiresIn() {
-        return expiresIn;
-    }
+//    public Auth(String access_token, String tokenType, int expiresAt, int expiresIn){
+//        this.access_token = access_token;
+//        this.token_type = tokenType;
+//        this.expiresAt = expiresAt;
+//        this.expiresIn = expiresIn;
+//    }
 
 }

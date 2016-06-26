@@ -16,6 +16,6 @@ import android.util.Base64;
 public interface PokitDokAPI {
 
     @FormUrlEncoded
-    @POST("oath2/token")
+    @POST("oauth2/token")
     Call<Auth> authToken (@Header("Authorization") String authorization, @Field("grant_type") String grantType);
 }
