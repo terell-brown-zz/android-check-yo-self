@@ -24,7 +24,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     testCompile 'com.android.support:appcompat-v7:23.4.0'
     //testCompile 'com.pokitdok:pokitdok-java:0.9'
-    //compile 'com.pokitdok:pokitdok-java:0.9'
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:recyclerview-v7:23.0.+'
 }
