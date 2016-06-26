@@ -15,7 +15,7 @@ public class NewProvider {
 
 
         public String distance;
-        public Provider_ provider;
+        public Provider provider;
 
     }
 

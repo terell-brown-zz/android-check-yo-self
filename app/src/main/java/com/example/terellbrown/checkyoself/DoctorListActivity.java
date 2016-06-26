@@ -1,9 +1,12 @@
 package com.example.terellbrown.checkyoself;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.terellbrown.checkyoself.API.Auth;
@@ -11,6 +14,7 @@ import com.example.terellbrown.checkyoself.API.NewProvider;
 import com.example.terellbrown.checkyoself.API.NewProvider.Providers;
 import com.example.terellbrown.checkyoself.API.TheAPI;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,11 +28,21 @@ public class DoctorListActivity extends AppCompatActivity {
     String TAG = DoctorListActivity.class.getSimpleName();
     Intent intent;
     String authToken;
+    public Button testButton;
+    private Context context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_list);
-        boolean r;
+        context = this;
+        testButton = (Button) findViewById(R.id.bTestButton);
+        testButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toDoctorInfoActivity();
+            }
+        });
         intent = getIntent();
         //getAuthToken();
         authToken = DataStore.init(getApplicationContext()).access_token().get();
@@ -67,5 +81,12 @@ public class DoctorListActivity extends AppCompatActivity {
                 Log.i(TAG, "onFailure: " + t.getMessage());
             }
         });
+    }
+
+    private void toDoctorInfoActivity(){
+        Intent intent = new Intent(context, DoctorsInfoActivity.class);
+        intent.putExtra("Provider", providerList.get(0).provider.npi);
+        intent.putExtra("AuthToken", authToken);
+        startActivity(intent);
     }
 }

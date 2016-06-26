@@ -36,6 +36,13 @@ public class RegisterActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DoctorListActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
 
