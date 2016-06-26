@@ -6,6 +6,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 import android.util.Base64;
@@ -18,4 +19,8 @@ public interface PokitDokAPI {
     @FormUrlEncoded
     @POST("oath2/token")
     Call<Auth> authToken (@Header("Authorization") String authorization, @Field("grant_type") String grantType);
+
+    @FormUrlEncoded
+    @GET("/api/v4/providers")
+    Call<Provider> getProvider(@Header("Authorization") String authorization, @Field("zipcode") String zipcode, @Field("specialty") String specialty, @Field("radius") String radius);
 }
