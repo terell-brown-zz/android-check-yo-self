@@ -49,8 +49,6 @@ public class DoctorListActivity extends AppCompatActivity {
 
         setupRecyclerView();
         getProviders(authToken);
-
-
     }
 
     private void setupRecyclerView() {
@@ -69,7 +67,7 @@ public class DoctorListActivity extends AppCompatActivity {
 
     private void getProviders(String auth) {
         Toast.makeText(getApplicationContext(),auth,Toast.LENGTH_LONG);
-        TheAPI.get().getProvidersByLocation("Bearer " + auth, "94104", "primary care", "100mi").enqueue(new Callback<Providers>(){
+        TheAPI.get().getProvidersByLocation("Bearer " + auth.replaceAll("\\n", ""), "94104", "primary care", "100mi").enqueue(new Callback<Providers>(){
             @Override
             public void onResponse(Call<Providers> call, Response<Providers> response) {
                 providerList = (ArrayList) response.body().data;

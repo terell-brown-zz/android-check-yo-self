@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -40,6 +41,16 @@ public class DoctorsInfoActivity extends AppCompatActivity {
         book = (Button) findViewById(R.id.btBook);
         intent = getIntent();
         getProviderDetails((String) intent.getExtras().get("AuthToken"), (String) intent.getExtras().get("Provider"));
+
+        book.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), BookingActivity.class);
+                intent.putExtra("PD_NAME", doctorsName.getText());
+                intent.putExtra("PD_ADDRESS", address.getText());
+                startActivity(intent);
+            }
+        });
     }
 //.replaceAll("\\n", "")
     private void getProviderDetails(String auth, String providernpi){
