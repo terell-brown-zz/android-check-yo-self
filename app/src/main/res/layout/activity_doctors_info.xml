@@ -77,16 +77,6 @@
             android:layout_alignStart="@+id/tvSpecialty"
             android:layout_alignEnd="@+id/tvAddress" />
 
-        <TextView
-            android:paddingLeft="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="\n Dr. Jerome Aya-Ay was raised in the small rural town of Grantsville, West Virginia. He graduated from the University of Notre Dame with a bachelor's degree in Biology.  After studying for a Masters in Biomedical Sciences at Marshall University, he continued on to graduate from Marshall University School of Medicine in Huntington, WV with a medical degree.  "
-            android:id="@+id/tvDoctorBio"
-            android:layout_below="@+id/tvPhoneNumber"
-            android:layout_alignStart="@+id/tvSpecialty"
-            android:layout_alignEnd="@+id/tvAddress" />
-
     </LinearLayout>
 
     <Button

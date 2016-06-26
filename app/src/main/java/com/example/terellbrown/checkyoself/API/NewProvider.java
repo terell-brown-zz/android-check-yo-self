@@ -12,8 +12,6 @@ import java.util.List;
 public class NewProvider {
 
     public class Datum {
-
-
         public String distance;
         public Provider provider;
 
@@ -63,5 +61,8 @@ public class NewProvider {
         public String phone;
         public Boolean verified;
         public List<String> specialty_secondary = new ArrayList<String>();
+        public String first_name;
+        public String last_name;
+        public String middle_name;
     }
 }

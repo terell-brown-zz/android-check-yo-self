@@ -53,6 +53,7 @@ public class DoctorsInfoActivity extends AppCompatActivity {
                 description.setText(response.body().data.provider.description);
             }
 
+
             @Override
             public void onFailure(Call<ProviderDetail> call, Throwable t) {
                 Log.i(TAG, "onFailure: " + t.getMessage());
